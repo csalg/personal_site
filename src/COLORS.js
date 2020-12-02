@@ -1,0 +1,5 @@
+const GREY1 = '#F5FAFC'
+const GREY2 = '#E9EDF0'
+const GREY3 = '#D0D4D6'
+const GREY4 = '#ABAEB0'
+const GREY5 = '#6D6F70'
