@@ -34,12 +34,11 @@ const Container = props => {
 }
 
 const Navbar = ({ name, links }) => {
-  console.log(links)
   const link_elements = Object.keys(links).map(key => {
     return <Link to={links[key]}>{key}</Link>
   })
   return (<nav>
-    <div className="logo">{name}</div>
+    <Link to={'/'} style={{ color: 'inherit', textDecoration: 'none'}}><div className="logo">{name}</div></Link>
     <ul>
       {link_elements.map(el => <li>{el}</li>)}
     </ul>
