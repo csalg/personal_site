@@ -104,7 +104,7 @@ const PortfolioItem = ({
 
   return (<div className={'portfolio-item-wrapper'} style={style}>
     <div className={'portfolio-item'}>
-      <div className={'flex-col justify-space-around align-center'}>
+      <div className={'flex flex-col justify-space-around align-center'}>
         {gallery.map(src => <img src={`/img/${src}`} alt="" style={{maxWidth: '100%'}} />)}
 
       </div>
