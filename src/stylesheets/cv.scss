@@ -46,7 +46,7 @@ tr>td:first-child {
 }
 tr>td:last-child {
     /*background-color: aqua;*/
-    width: 450px;
+    max-width: 450px;
 }
 
 h3 {
@@ -91,3 +91,38 @@ li {
     margin-top: 4em;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0 0.5em 0;
+
+    img {
+        width: 25%;
+        border-radius: 50%;
+    }
+}
+
+
+.personal-info {
+    margin: -9.5em 0 2em 0;
+}
+@media only screen and (max-width: 210mm) {
+    table.sectionTable {
+        width: auto;
+    }
+    tr td {
+        display: block;
+        width: auto;
+    }
+    .header {
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 180px;
+        }
+    }
+    .personal-info {
+        margin: 0;
+    }
+}

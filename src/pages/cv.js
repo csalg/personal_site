@@ -9,7 +9,7 @@ import {Education} from "@styled-icons/zondicons/Education"
 import {Tools} from "@styled-icons/entypo/Tools"
 import {Github} from '@styled-icons/boxicons-logos/Github'
 import {World} from '@styled-icons/boxicons-regular/World'
-import '../stylesheets/cv.css'
+import '../stylesheets/cv.scss'
 
 
 export default function Home() {
@@ -150,11 +150,7 @@ const CV = props => (
 )
 
 const Header = props => {
-  return <div style={{
-    display: "flex",
-    justifyContent: "space-between",
-    margin: '1em 0 0.5em 0'
-  }}>
+  return <div className={'header'}>
     <div>
     <h1 className={'name'} style={{
       margin: '0 0 -0.2em 0',
@@ -164,18 +160,13 @@ const Header = props => {
       }}
       >Curriculum Vitae</span>
     </div>
-    <img src="img/cv-photo-small.png" style={{
-      width: '25%',
-      borderRadius: '50%'
-    }}/>
+    <img src="img/cv-photo-small.png"/>
 
   </div>
 }
 
 const PersonalInfo = (props) => {
-  return <div style={{
-    margin: '-5.5em 0 2em 0'
-  }}>
+  return <div className={'personal-info'}>
       <table className='personalInfoTable'>
         {props.children}
       </table>
