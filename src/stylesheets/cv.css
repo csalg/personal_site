@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: 'Palatino Linotype';
-    src: url('./fonts/Palatino Linotype.ttf') /* Safari, Android, iOS */
+    src: url('../fonts/Palatino Linotype.ttf') /* Safari, Android, iOS */
 }
 * {
     box-sizing: border-box;

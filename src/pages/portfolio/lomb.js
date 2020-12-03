@@ -1,6 +1,7 @@
 import React from "react"
 import NavigationWrapper from "../../components/NavigationWrapper"
-import "../../styles.scss"
+import "../../stylesheets/_styles.scss"
+import "../../stylesheets/portfolio-lomb.scss"
 
 export default _ => (
   <NavigationWrapper>
@@ -216,26 +217,24 @@ const Readable = ({ children }) => {
 
 const Slide = ({ children, className }) => (
   <div className={`slide ${className ? className : ""}`}>
+    <div style={{maxWidth: '700px'}} className={'flex flex-col align-center'}>
     {children}
+    </div>
   </div>
 )
 
 const Figures = ({ children }) => (
   <div
-    style={{
-      width: "700px",
-      maxHeight: "80vh",
-      padding: "2em 4em",
-      display: "grid",
-      gridTemplateColumns: "50% 50%"
-    }}
+    className={'figures'}
   >
     {children}
   </div>
 )
 
-const Figure = ({ src, title, caption }) => (<div style={{ margin: "2em", maxWidth: '100%' }}>
-  <img src={src} alt="" style={{ width: "100%",marginBottom: "1em" }} />
+const Figure2 = _ => <div/>
+
+const Figure = ({ src, title, caption }) => (<div style={{ padding: "2em", maxWidth: '100%' }}>
+  <img src={src} alt="" style={{ maxWidth: "100%",marginBottom: "1em" }} />
   <div style={{ width: "100%", display:'flex', justifyContent: 'center' }}>
     <div style={{maxWidth: '60ch'}}>
       <h3 style={{}}>{title}</h3>

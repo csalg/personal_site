@@ -9,7 +9,7 @@ import {Education} from "@styled-icons/zondicons/Education"
 import {Tools} from "@styled-icons/entypo/Tools"
 import {Github} from '@styled-icons/boxicons-logos/Github'
 import {World} from '@styled-icons/boxicons-regular/World'
-import '../cv.css'
+import '../stylesheets/cv.css'
 
 
 export default function Home() {

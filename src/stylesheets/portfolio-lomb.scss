@@ -1,0 +1,67 @@
+@import 'styles';
+
+.readable {
+  max-width: 60ch;
+  padding: 0 1em;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $fancy-font-bold;
+    margin-bottom: 0.5em;
+  }
+  p, ol, ul {
+    margin-bottom: 1.5em;
+    line-height: 1.5;
+    text-align: justify;
+  }
+}
+
+.dark {
+  display: block;
+  background: $GREY8;
+  color: $GREY1;
+}
+
+.white {
+  background: white;
+  color: $GREY8;
+}
+
+.grey {
+  display: block;
+  background: $GREY1;
+  color: $GREY8;
+}
+
+
+.page_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 4em 0;
+}
+
+.content {
+  padding: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  .content {
+    max-width: 100vw;
+  }
+}
+.figures {
+  max-width: 700px;
+  max-height: 80vh;
+  //padding: 2em 4em;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.wrapper__container {
+  width: 100vw
+}

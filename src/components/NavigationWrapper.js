@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import "../styles.scss"
+import "../stylesheets/_styles.scss"
 import { Helmet } from "react-helmet"
 
 
@@ -25,7 +25,7 @@ export default props => {
 
 const Container = props => {
   return (
-    <div className="page_wrapper">
+    <div className="flex align-center">
       <div className={"wrapper__container"}>
         {props.children}
       </div>

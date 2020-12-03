@@ -1,8 +1,7 @@
 import React from "react"
 import {Link} from "gatsby"
-import '../styles.scss'
-import './portfolio.scss'
-import "../buttons.scss"
+import '../stylesheets/_styles.scss'
+import '../stylesheets/portfolio.scss'
 import {LogoPython} from "@styled-icons/ionicons-solid/LogoPython"
 import {LogoReact} from "@styled-icons/ionicons-solid/LogoReact"
 import {Mongodb} from "@styled-icons/simple-icons/Mongodb"

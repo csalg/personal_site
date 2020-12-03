@@ -1,0 +1,122 @@
+$fancy-font-bold: 'BikoBold', serif;
+$fancy-font: 'BikoRegular', serif;
+$body-font: CallunaLight, sans-serif;
+$GREY1: #F5FAFC;
+$GREY2: #E9EDF0;
+$GREY3: #D0D4D6;
+$GREY4: #ABAEB0;
+$GREY5: #6D6F70;
+$GREY7: #444;
+$GREY8: #1A1E23;
+
+a {
+  color: coral;
+}
+
+@font-face {
+  font-family: 'BikoRegular';
+  src: url('../fonts/Biko_Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'BikoBold';
+  src: url('../fonts/Biko_Bold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'QuestaRegular';
+  src: url('../fonts/2-Questa_Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'CallunaLight';
+  src: url('../fonts/Calluna Light.otf') format('opentype');
+}
+@font-face {
+  font-family: 'PrintClearlyBold';
+  src: url('../fonts/PrintBold-J5o.ttf');
+}
+
+@font-face {
+  font-family: 'PrintClearly';
+  src: url('../fonts/PrintClearly-GGP.ttf');
+}
+@font-face {
+  font-family: 'QuicksandRegular';
+  src: url('../fonts/Quicksand-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'QuicksandBold';
+  src: url('../fonts/Quicksand-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Blackjack';
+  src: url('../fonts/blackjack.otf') format('opentype');
+}
+@font-face {
+  font-family: 'LatoLight';
+  src: url('../fonts/Lato-Light.ttf');
+}
+
+@font-face {
+  font-family: 'CenturyOldStyle';
+  src: url('../fonts/Century Old Style Std Regular.otf') format('opentype');
+}
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'CallunaLight', arial;
+}
+
+body {
+  background-color: $GREY2;
+}
+
+.wrapper__container {
+  min-height: 100vh;
+  max-width: 1440px;
+  display: grid;
+}
+
+
+nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15%;
+  padding-top: 2em;
+
+  .logo {
+    font-family: 'Blackjack', arial;
+    font-size: 3em;
+  }
+  ul {
+    padding-top: 2em;
+    list-style: none;
+
+    li {
+      font-size: 1.5em;
+      padding-top: 0.5em;
+
+      a {
+        text-decoration: inherit;
+        font-family: $fancy-font;
+        color: inherit;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width:1200px) {
+  .wrapper__container {
+    grid-template-columns: 20% auto;
+  }
+}
+
+@media only screen and (max-width:1200px) {
+  .wrapper__container {
+    grid-template-columns: auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $fancy-font;
+}
