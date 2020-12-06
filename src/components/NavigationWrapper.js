@@ -4,7 +4,7 @@ import "../stylesheets/_styles.scss"
 import { Helmet } from "react-helmet"
 
 
-export default props => {
+export default ({children, contentId}) => {
   return <Container>
     <Helmet>
       <meta charSet="utf-8" />
@@ -17,8 +17,8 @@ export default props => {
         // blog: '/blog',
         cv: "/cv"
       }} />
-    <Content>
-      {props.children}
+    <Content id={contentId}>
+      {children}
     </Content>
   </Container>
 }
@@ -45,8 +45,8 @@ const Navbar = ({ name, links }) => {
   </nav>)
 }
 
-const Content = props => {
-  return (<div className={"content"}>
-    {props.children}
+const Content = ({children, id}) => {
+  return (<div className={"content"} id={id}>
+    {children}
   </div>)
 }

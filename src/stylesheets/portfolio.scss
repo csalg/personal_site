@@ -1,53 +1,16 @@
 @import "_styles.scss";
 
-.flex {
-  display: flex;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.justify-space-around {
-  justify-content: space-around;
-}
-
-.align-center {
-  align-items: center;
-}
-
-@media only screen and (min-width: 1200px) {
-
-  .portfolio-item {
-    grid-template-columns: 300px auto;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-
-  .portfolio-item {
-    grid-template-columns: auto;
-
-    img, main {
-      padding: 2em;
-    }
-  }
-}
-
 .portfolio-item-wrapper {
   display: flex;
   justify-content: center;
   background-color: white;
   padding: 2em;
-  margin-bottom: 2em;
+  margin-bottom: 4em;
 }
 
-
-.content {
-  padding: 0 2em;
+#portfolio-content {
+padding: 0 1em;
   .portfolio-item {
-
-
     display: grid;
     img {
       width: 250px;
@@ -74,8 +37,8 @@
   overflow: hidden;
   text-transform: uppercase;
   height: 40px;
-  min-width: 150px;
-  padding: 0.1em 1em;
+  min-width: 120px;
+  padding: 0.1em 0.5em;
   background-color: $GREY2;
   color: $GREY7;
   font-size: 0.8em;
@@ -84,5 +47,27 @@
   &:hover {
     background-color: $GREY1;
 
+  }
+}
+@media only screen and (min-width: $BREAKPOINT) {
+
+  .portfolio-item {
+    grid-template-columns: 300px auto;
+  }
+
+}
+
+@media only screen and (max-width: $BREAKPOINT) {
+
+  #portfolio-content {
+    .portfolio-item {
+      grid-template-columns: auto;
+
+      img, main {
+        padding: 2em 0;
+        padding-left: 0;
+      }
+
+    }
   }
 }

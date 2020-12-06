@@ -1,6 +1,5 @@
 import React from "react"
 import {Link} from "gatsby"
-import '../stylesheets/_styles.scss'
 import '../stylesheets/portfolio.scss'
 import {LogoPython} from "@styled-icons/ionicons-solid/LogoPython"
 import {LogoReact} from "@styled-icons/ionicons-solid/LogoReact"
@@ -20,7 +19,7 @@ import {ReadMore} from "@styled-icons/material-outlined/ReadMore"
 import {MarkGithub} from "@styled-icons/octicons/MarkGithub"
 
 export default () => (
-  <NavigationWrapper>
+  <NavigationWrapper contentId={'portfolio-content'}>
       <PortfolioItem
         name={"Lomb"}
         readMore={'lomb'}
