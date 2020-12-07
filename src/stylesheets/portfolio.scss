@@ -12,6 +12,9 @@
 padding: 0 1em;
   .portfolio-item {
     display: grid;
+    .portfolio-item-heading {
+      margin-bottom: 1.5em;
+    }
     img {
       width: 250px;
       padding: 1em 0;
@@ -21,13 +24,18 @@ padding: 0 1em;
       h1 {
         font-family: $fancy-font;
         font-size: 1.5em;
-        margin-bottom: 0.5em;
       }
       p {
         padding-bottom: 2em;
         max-width: 60ch;
         text-align: justify;
         color: $GREY7;
+        ul {
+          li {
+            margin-bottom: 0.5em;
+            color: inherit;
+          }
+        }
       }
     }
   }
@@ -88,3 +96,4 @@ padding: 0 1em;
     }
   }
 }
+
