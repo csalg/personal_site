@@ -14,6 +14,7 @@ padding: 0 1em;
     display: grid;
     img {
       width: 250px;
+      padding: 1em 0;
     }
     main {
       padding-left: 3em;
@@ -37,7 +38,6 @@ padding: 0 1em;
   overflow: hidden;
   text-transform: uppercase;
   height: 40px;
-  min-width: 120px;
   padding: 0.1em 0.5em;
   background-color: $GREY2;
   color: $GREY7;
@@ -54,20 +54,37 @@ padding: 0 1em;
   .portfolio-item {
     grid-template-columns: 300px auto;
   }
-
 }
 
-@media only screen and (max-width: $BREAKPOINT) {
+@media only screen and (min-width: $MOBILE_BREAKPOINT) and (max-width: $BREAKPOINT) {
 
   #portfolio-content {
+    padding: 0 4em;
     .portfolio-item {
       grid-template-columns: auto;
-
       img, main {
-        padding: 2em 0;
-        padding-left: 0;
+        padding: 1em 0;
       }
+      img {
+        width: 40vw;
+      }
+    }
+  }
+}
 
+
+@media only screen and (max-width: $MOBILE_BREAKPOINT) {
+  #portfolio-content {
+    padding: 0;
+    .portfolio-item {
+      grid-template-columns: auto;
+      padding: 0 2em;
+      img, main {
+        padding: 1em 0;
+      }
+      img {
+        width: 100%;
+      }
     }
   }
 }
