@@ -6,12 +6,15 @@
   background-color: white;
   padding: 2em;
   margin-bottom: 4em;
+  box-shadow: 0 2.5px 6px rgba(0,0,0,.1);
+  border-radius: 8px;
 }
 
 #portfolio-content {
 padding: 0 1em;
   .portfolio-item {
     display: grid;
+
     .portfolio-item-heading {
       margin-bottom: 1.5em;
     }
