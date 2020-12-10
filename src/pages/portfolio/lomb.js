@@ -164,13 +164,13 @@ export default _ => (
 
         <p>As it turned out, this architecture was quite a good fit for the problem, but not perfect. The two main flaws of this architecture are:</p>
         <ol>
-          <li>The <i>users</i> bounded context would have been simpler if it had just been some controllers and repositories. It didn't really need a domain module. In the future, I think I should be able to see this in the design stage.
+          <li>The <i>users</i> bounded context would have been simpler if it had just been some controllers and repositories. It didn't really need a domain module.
           </li>
-          <li>The <i>library</i> and <i>vocabulary</i> contexts should be merged into a larger <i>texts</i> context. These two contexts are essentially the core of the application, they provide entities for many joint use cases that have to go around the partition somehow, and it is reasonable to think that will be the case in the future as well. Although merging implies a more complex bounded context, the alternative implies hidden dependencies and API's which are interdependant (i.e. protocols) which is much more complex is even worse. Merging and having a common domain module would therefore make developing new features much easier.
+          <li>The <i>library</i> and <i>vocabulary</i> contexts should be merged into a larger <i>texts</i> context. These two contexts are essentially the core of the application: they provide entities for many use cases that have to go around the partition somehow, and it is reasonable to think that will be the case in the future as well. Although merging implies a more complex bounded context, the alternative implies hidden dependencies and APIs which are interdependent (i.e. protocols), and therefore hard to work with.
           </li>
         </ol>
 
-        <p>The reason why I was satisfied with the architecture, though, was because those flaws were easy to correct. The first flaw did not need fixing, it is just a slightly overengineered context, but the context itself was still simple enough to be maintainable and extendable. The second flaw was important, because the split between <i>vocabulary</i> and <i>library</i> made developing features that required entities from both contexts cumbersome, with subpar performance. Thankfully, merging both contexts was done early enough to not be too time-consuming.</p>
+        <p>The reason why I was satisfied with the architecture, though, was because those flaws were easy to correct. The first flaw was minor: just a slightly overengineered context, but still simple enough to be maintainable and extendable. The second flaw was important: the split between <i>vocabulary</i> and <i>library</i> made developing features that required entities from both contexts cumbersome. Thankfully, merging both contexts was done early enough to not be too time-consuming.</p>
 
 
       </Readable>
