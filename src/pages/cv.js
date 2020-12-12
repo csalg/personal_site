@@ -99,28 +99,36 @@ export default function Home() {
       <SectionItem
         date={"Development"}
         header={""}
-        subheader={"SDLC, software architecture, domain-oriented design, TDD, unit testing"}
+        subheader={"SDLC, software architecture, domain-driven design, TDD, unit testing"}
         details={[
         ]}
       />
       <SectionItem
-        date={"Computer languages"}
+        date={"Backend"}
         header={""}
-        subheader={"Python, Javascript, C++, Go, R"}
+        subheader={"Python (flask, django), Go, C++"}
         details={[
         ]}
       />
       <SectionItem
-        date={"Libraries / Frameworks"}
+        date={"Data analytics"}
         header={""}
-        subheader={"React, Gatsby, Django, Tensorflow, Keras, SKLearn, NumPy, Pandas..."}
+        subheader={"Tensorflow, keras, sklearn, numpy, pandas, R"}
+        details={[
+        ]}
+      />
+      <SectionItem
+        date={"Frontend"}
+        header={""}
+        subheader={"React, Gatsby, Tailwind, antd, material"}
+
         details={[
         ]}
       />
       <SectionItem
         date={"Operations"}
         header={""}
-        subheader={"Linux, Docker, Bash scripting"}
+        subheader={"Linux, Docker, AWS, Bash scripting"}
         details={[
         ]}
       />
