@@ -99,7 +99,7 @@ export default function Home() {
       <SectionItem
         date={"Development"}
         header={""}
-        subheader={"SDLC, software architecture, domain-driven design, TDD, unit testing"}
+        subheader={"SDLC, software architecture, domain-driven design, TDD, unit testing, UML"}
         details={[
         ]}
       />
@@ -120,7 +120,7 @@ export default function Home() {
       <SectionItem
         date={"Frontend"}
         header={""}
-        subheader={"React, Gatsby, Tailwind, antd, material"}
+        subheader={"React, Typescript, Gatsby, antd, material"}
 
         details={[
         ]}
