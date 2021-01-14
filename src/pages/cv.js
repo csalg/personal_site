@@ -168,7 +168,7 @@ const Header = props => {
       }}
       >Curriculum Vitae</span>
     </div>
-    <img src="img/cv-photo-small.png"/>
+    <img src="/img/cv-photo-small.png"/>
 
   </div>
 }
