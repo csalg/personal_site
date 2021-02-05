@@ -13,6 +13,8 @@ import { Elm } from "@styled-icons/simple-icons/Elm"
 import { Django } from "@styled-icons/simple-icons/Django"
 import { Materialdesign } from "@styled-icons/simple-icons/Materialdesign"
 import { Latex } from "@styled-icons/simple-icons/Latex"
+import {RProject} from '@styled-icons/fa-brands/RProject'
+import {Cuttlefish} from '@styled-icons/fa-brands/Cuttlefish'
 import { AcademicCap } from "@styled-icons/heroicons-solid/AcademicCap"
 import NavigationWrapper from "../components/NavigationWrapper"
 import { ReadMore } from "@styled-icons/material-outlined/ReadMore"
@@ -58,6 +60,28 @@ export default () => (
       ]}
     />
     <PortfolioItem
+      name={"Pubsub Testing Framework"}
+      subtitle={"Framework used for testing new content-based publish-subscribe algorithms."}
+      subtitle={"Research into intelligent cloud middleware."}
+      github={"https://github.com/csalg/pubsub/"}
+      gallery={["portfolio-pubsub.png"]}
+      description={[
+        "Message queues are the backbone of distributed systems and stream architectures. At their heart is a brokering algorithm which decides which events get forwarded to which consumers.",
+        "Current message queue brokering algorithms are topic-based, so clients get all the events in a certain topic, of which usually a small percentage are relevant",
+        "An important research direction in my lab is next-generation content-based publish-subscribe algorithms which can perform filtering directly at the broker, hence greatly improving the performance of cloud-native applications",,
+        "I worked on this C++ codebase for about 4 months.",
+        "I implemented my own algorithms for the problem. The performance was ok in some cases, but it wasn't a super strong result and decided to pursue weakly supervised memory-tracing regression for my thesis instead.",
+        "Another contribution was to automate much of the work involved in running experiments: user declares what should be done in a configuration file and the program runs the experiments, plots the results, typesets Latex tables, etc. (before this was a very time consuming process)."]
+      }
+      stack={[
+        <StackItem Icon={Cuttlefish} name='C++' />,
+        <StackItem Icon={RProject} name='R' />,
+        <StackItem Icon={LogoPython} name='Python' />,
+        <StackItem Icon={Latex} name='Latex' />
+      ]}
+      // stack={["C++, R, Python, Latex"]}
+    />
+    <PortfolioItem
       name={"Chemotherapy Management App"}
       subtitle={"Medicine management solution."}
       externalReadMore={"https://github.com/csalg/chemotherapy_manager"}
@@ -74,17 +98,6 @@ export default () => (
         <StackItem Icon={Elm} name='Elm' />,
         <StackItem Icon={Materialdesign} name='Material design' />
       ]}
-    />
-    <PortfolioItem
-      name={"Pubsub Testing Framework"}
-      subtitle={"Framework used for testing new content-based publish-subscribe algorithms."}
-      github={"https://github.com/csalg/pubsub/"}
-      gallery={["portfolio-pubsub.png"]}
-      description={[
-        "I inherited this codebase, which I significantly re-wrote and then extended.",
-        "My main contribution was to automate much of the work involved in running experiments: user declares what should be done in a configuration file and the program runs the experiments, plots the results, typesets Latex tables, etc. (before this was a very time consuming process)."]
-      }
-      stack={["C++, R, Python, Latex"]}
     />
 
   </NavigationWrapper>

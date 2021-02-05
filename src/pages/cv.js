@@ -8,7 +8,10 @@ import {Suitcase} from "@styled-icons/entypo/Suitcase"
 import {Education} from "@styled-icons/zondicons/Education"
 import {Tools} from "@styled-icons/entypo/Tools"
 import {Github} from '@styled-icons/boxicons-logos/Github'
+import {LinkedinSquare} from '@styled-icons/boxicons-logos/LinkedinSquare'
 import {World} from '@styled-icons/boxicons-regular/World'
+import {OpenBook} from '@styled-icons/entypo/OpenBook'
+import {DocumentText} from '@styled-icons/typicons/DocumentText';
 import '../stylesheets/cv.scss'
 
 
@@ -20,7 +23,8 @@ export default function Home() {
       <InfoItem name = 'Address' icon={PersonalInfoIcon(LocationPin)} data={'Kagsåkollegiet 2, 2860 Søborg'} />
       <InfoItem name = 'Phone' icon={PersonalInfoIcon(Phone)} data={'+45 5279 9658'} />
       <InfoItem name = 'E-Mail' icon={PersonalInfoIcon(Mail)} data={'charlie@csalgado.io'} />
-      <InfoItem name = 'Github' icon={PersonalInfoIcon(Github)} data={'csalg'} />
+      <InfoItem name = 'Github' icon={PersonalInfoIcon(Github)} data={'github.com/csalg'} />
+      <InfoItem name = 'LinkedIn' icon={PersonalInfoIcon(LinkedinSquare)} data={'linkedin.com/in/csalg'} />
       <InfoItem name = 'Website' icon={PersonalInfoIcon(World)} data={'www.csalgado.io'} />
 
     </PersonalInfo>
@@ -31,9 +35,9 @@ export default function Home() {
         header={"Laboratory for Collaborative Intelligent Technologies"}
         subheader={"Software Developer"}
         details={[
+          "Designed and implemented new publish-subscribe algorithms in C++.",
           "Full-stack work using Python for backends and predictive analytics and React for frontend work.",
           "Developed and published a predictive model for estimating vocabulary memory traces from user interaction data.",
-          "Designed and implemented new publish-subscribe algorithms in C++.",
         ]}
     />
 
@@ -140,6 +144,27 @@ export default function Home() {
         ]}
       />
     </Section>
+      <Section
+        title = {"Publications"}
+        icon={SectionIcon(OpenBook)}
+      >
+        <tr>
+          <td style={{
+            width:"4.4em",
+          }}>
+            <DocumentText style={{
+              margin: "0em 0.5em 0.25em 2.5em",
+              color: "hsla(0,0%,0%,0.4)",
+              fontSize:"0.8em"
+            }}/>
+          </td>
+          <td>
+            <div style={{maxWidth: "70ch"}}>
+              Perez-Guerra, Carlos & Jian Cao (2021).  Estimating Memory Retention Traces of Foreign Language Vocabulary from Reading Interaction Data. <i>Proceedings of the 2021 IEEE 24th International Conference on Computer Supported Cooperative Work in Design (CSCWD).</i>
+            </div>
+          </td>
+        </tr>
+      </Section>
     </div>
   </CV>
 }
@@ -197,7 +222,7 @@ const Section = (props) => {
     margin: '2em 0',
     pageBreakBefore: props.pageBreak
   }}>
-    <h3><Icon/><span style={{paddingLeft: '0.25em'}}>{props.title}</span></h3>
+    <h3 style={{marginBottom: "0.5em"}}><Icon/><span style={{paddingLeft: '0.25em'}}>{props.title}</span></h3>
     <table className="sectionTable">
       {props.children}
     </table>
