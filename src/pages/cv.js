@@ -130,9 +130,9 @@ export default function Home() {
         ]}
       />
       <SectionItem
-        date={"Operations"}
+        date={"Other cool tech"}
         header={""}
-        subheader={"Linux, Docker, AWS, Bash scripting"}
+        subheader={"Linux, Docker, Kafka, AWS, Bash scripting"}
         details={[
         ]}
       />
