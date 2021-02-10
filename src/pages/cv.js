@@ -103,7 +103,7 @@ export default function Home() {
       <SectionItem
         date={"Development"}
         header={""}
-        subheader={"event-stream architectures, SDLC, software architecture, domain-driven design, TDD, unit testing, UML"}
+        subheader={"Event-stream architectures, SDLC, software architecture, domain-driven design, TDD, unit testing, UML"}
         details={[
         ]}
       />
