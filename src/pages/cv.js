@@ -103,7 +103,7 @@ export default function Home() {
       <SectionItem
         date={"Development"}
         header={""}
-        subheader={"Event-stream architectures, SDLC, software architecture, domain-driven design, TDD, unit testing, UML"}
+        subheader={"Event-stream architectures, SDLC, software architecture, domain-driven design, TDD/ATDD, UML"}
         details={[
         ]}
       />
@@ -111,6 +111,13 @@ export default function Home() {
         date={"Backend"}
         header={""}
         subheader={"Python (fastapi, flask, django, celery...), Go, C++"}
+        details={[
+        ]}
+      />
+      <SectionItem
+        date={"Other cool tech"}
+        header={""}
+        subheader={"Linux, AWS, Docker, Kubernetes, Serverless, GitLab CI/CD, Kafka, MongoDB, Vagrant, Bash"}
         details={[
         ]}
       />
@@ -129,13 +136,7 @@ export default function Home() {
         details={[
         ]}
       />
-      <SectionItem
-        date={"Other cool tech"}
-        header={""}
-        subheader={"Linux, Docker, Kubernetes, Serverless, Kafka, MongoDB, AWS, Bash scripting"}
-        details={[
-        ]}
-      />
+
       <SectionItem
         date={"Human languages"}
         header={""}
