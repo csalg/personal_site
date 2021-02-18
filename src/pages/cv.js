@@ -101,23 +101,30 @@ export default function Home() {
     </Section>
     <Section title = {"Skills"} icon={SectionIcon(Tools)}>
       <SectionItem
-        date={"Development"}
+        date={"Design & architecture"}
         header={""}
-        subheader={"Event-stream architectures, SDLC, software architecture, domain-driven design, TDD/ATDD, UML"}
+        subheader={"Event-stream architectures, domain-driven design, clean code, TDD/ATDD, UML"}
         details={[
         ]}
       />
       <SectionItem
-        date={"Backend"}
+        date={"Backend languages"}
         header={""}
-        subheader={"Python (fastapi, flask, django, celery...), Go, C++"}
+        subheader={"Python (fastapi, async, flask, django, celery...), Go, C++"}
         details={[
         ]}
       />
       <SectionItem
-        date={"Other cool tech"}
+        date={"Backing"}
         header={""}
-        subheader={"Linux, AWS, Docker, Kubernetes, Serverless, GitLab CI/CD, Kafka, MongoDB, Vagrant, Bash"}
+        subheader={"MongoDB, SQL, DynamoDB"}
+        details={[
+        ]}
+      />
+      <SectionItem
+        date={"Cloud"}
+        header={""}
+        subheader={"Linux, AWS, Serverless, Docker, Kubernetes, GitLab CI/CD, Kafka, Vagrant, Bash"}
         details={[
         ]}
       />
