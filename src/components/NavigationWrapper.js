@@ -25,7 +25,7 @@ export default ({children, contentId}) => {
 
 const Container = props => {
   return (
-    <div className="flex align-center">
+    <div className="flex justify-space-around">
       <div className={"wrapper__container"}>
         {props.children}
       </div>
