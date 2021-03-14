@@ -14,7 +14,7 @@ import { Django } from "@styled-icons/simple-icons/Django"
 import { Materialdesign } from "@styled-icons/simple-icons/Materialdesign"
 import { Latex } from "@styled-icons/simple-icons/Latex"
 import {RProject} from '@styled-icons/fa-brands/RProject'
-import {Cuttlefish} from '@styled-icons/fa-brands/Cuttlefish'
+import {CPlusPlus} from '@styled-icons/boxicons-logos/CPlusPlus'
 import { AcademicCap } from "@styled-icons/heroicons-solid/AcademicCap"
 import NavigationWrapper from "../components/NavigationWrapper"
 import { ReadMore } from "@styled-icons/material-outlined/ReadMore"
@@ -74,7 +74,7 @@ export default () => (
         "Another contribution was to automate much of the work involved in running experiments: user declares what should be done in a configuration file and the program runs the experiments, plots the results, typesets Latex tables, etc. (before this was a very time consuming process)."]
       }
       stack={[
-        <StackItem Icon={Cuttlefish} name='C++' />,
+        <StackItem Icon={CPlusPlus} name='C++' />,
         <StackItem Icon={RProject} name='R' />,
         <StackItem Icon={LogoPython} name='Python' />,
         <StackItem Icon={Latex} name='Latex' />
