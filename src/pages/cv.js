@@ -31,6 +31,24 @@ export default function Home() {
 
     <Section title = {"Work Experience"} icon={SectionIcon(Suitcase)}>
       <SectionItem
+        date={"04/2021-now"}
+        header={"ChurchDesk"}
+        subheader={"Software Developer, Backend"}
+        details={[
+          "Super excited to be starting here in a few weeks!"
+        ]}
+      />
+      <SectionItem
+        date={"02/2021"}
+        header={"Uniqkey"}
+        subheader={"Software Developer, QA"}
+        details={[
+          "Started service-level api testing, which now gets triggered as part of the CI/CD commit cycle.",
+          "Clarifying expected behaviour with PO, Support, QA and coming up with test cases.",
+          "Tech stack: Node, CircleCI, SQL, Pusher, mocha, chai, supertest.",
+        ]}
+      />
+      <SectionItem
         date={"06/2019-12/2020"}
         header={"Laboratory for Collaborative Intelligent Technologies"}
         subheader={"Software Developer"}
@@ -75,6 +93,7 @@ export default function Home() {
       header={"MSc. Computer Science"}
       subheader={"Shanghai Jiaotong University"}
       details={[
+        "(Remark: Only waiting for thesis defense which will happen online.)",
         "GPA: 3.8/4.0, top 5 percentile",
         "Research direction: data-driven software development",
         "Awarded CSC A scholarship for the duration of my studies.",
@@ -110,21 +129,21 @@ export default function Home() {
       <SectionItem
         date={"Backend languages"}
         header={""}
-        subheader={"Python (fastapi, async, flask, django, celery...), Go, C++"}
+        subheader={"Python (fastapi, async, flask, django, celery...), Node, Go, C++"}
         details={[
         ]}
       />
       <SectionItem
-        date={"Backing"}
+        date={"Databases / Queues"}
         header={""}
-        subheader={"MongoDB, SQL, DynamoDB"}
+        subheader={"MongoDB, SQL, Kafka, DynamoDB"}
         details={[
         ]}
       />
       <SectionItem
         date={"Cloud"}
         header={""}
-        subheader={"Linux, AWS, Serverless, Docker, Kubernetes, GitLab CI/CD, Kafka, Vagrant, Bash"}
+        subheader={"Linux, AWS, Serverless, Docker, Kubernetes, CircleCI, Vagrant, Bash"}
         details={[
         ]}
       />
