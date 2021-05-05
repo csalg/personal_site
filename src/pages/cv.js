@@ -36,9 +36,9 @@ export default function Home() {
         subheader={"Software Developer, Backend"}
         details={[
           "Designing and implementing new features with Product Manager and other team members.",
-          "Refactoring really long methods from legacy code into something maintainable.",
-          "Upgrading dependencies.",
-          "Also ops stuff: e.g. I migrated the production db to new MariaDb cluster which I set up.",
+          "Refactoring very long legacy code methods into something maintainable.",
+          "Bumping dependency versions.",
+          "Some ops stuff: e.g. I migrated the production db to new MariaDb cluster which I set up.",
         ]}
       />
       <SectionItem
