@@ -1,3 +1,5 @@
+@import "_styles";
+
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
@@ -18,8 +20,16 @@ body {
     margin: 0;
 }
 @media print {
-    body {
+    body>div {
         background-color: white;
+    }
+
+    .personal-info {
+       margin-top: -11em;
+    }
+
+    #cv-work-experience {
+        font-size: 90%;
     }
 
     }
@@ -42,7 +52,7 @@ tr {
 tr>td:first-child {
     /*background-color: aqua;*/
     width: 200px;
-    color: hsla(0,0%, 0%, 0.6);
+    color: hsla(0,0%, 0%, 0.7);
 }
 tr>td:last-child {
     /*background-color: aqua;*/
@@ -126,4 +136,10 @@ li {
     .personal-info {
         margin: 0;
     }
+}
+
+.cv-city {
+    font-size: 80%;
+    font-style: italic;
+    opacity: 80%;
 }

@@ -1,6 +1,5 @@
 import React from "react"
 import styled from 'styled-components'
-import {Calendar} from '@styled-icons/boxicons-regular/Calendar'
 import {LocationPin} from '@styled-icons/entypo/LocationPin'
 import {Phone}  from '@styled-icons/boxicons-regular/Phone'
 import {Mail} from"@styled-icons/entypo/Mail"
@@ -12,6 +11,7 @@ import {LinkedinSquare} from '@styled-icons/boxicons-logos/LinkedinSquare'
 import {World} from '@styled-icons/boxicons-regular/World'
 import {OpenBook} from '@styled-icons/entypo/OpenBook'
 import {DocumentText} from '@styled-icons/typicons/DocumentText';
+import {Cake2} from "@styled-icons/remix-line/Cake2";
 import '../stylesheets/cv.scss'
 
 
@@ -19,27 +19,31 @@ export default function Home() {
   return <CV>
     <Header name={"Carlos Pérez-Guerra"}/>
     <PersonalInfo>
-      <InfoItem name = 'Birthday' icon={PersonalInfoIcon(Calendar)} data={'01/07/1989, Madrid (Spain)'} />
-      <InfoItem name = 'Address' icon={PersonalInfoIcon(LocationPin)} data={'Kagsåkollegiet 2, 2860 Søborg'} />
-      <InfoItem name = 'Phone' icon={PersonalInfoIcon(Phone)} data={'+45 5279 9658'} />
+      <InfoItem name = 'Portfolio' icon={PersonalInfoIcon(World)} data={'www.csalgado.io'} />
       <InfoItem name = 'E-Mail' icon={PersonalInfoIcon(Mail)} data={'charlie@csalgado.io'} />
       <InfoItem name = 'Github' icon={PersonalInfoIcon(Github)} data={'github.com/csalg'} />
       <InfoItem name = 'LinkedIn' icon={PersonalInfoIcon(LinkedinSquare)} data={'linkedin.com/in/csalg'} />
-      <InfoItem name = 'Website' icon={PersonalInfoIcon(World)} data={'www.csalgado.io'} />
-
+      <InfoItem name = 'Phone' icon={PersonalInfoIcon(Phone)} data={'+45 5279 9658'} />
+      <InfoItem name = 'Address' icon={PersonalInfoIcon(LocationPin)} data={'Kagsåkollegiet 2, 2860 Søborg'} />
+      <InfoItem name = 'Birthday' icon={PersonalInfoIcon(Cake2)} data={'01/07/1989, Madrid (Spain)'} />
     </PersonalInfo>
 
-    <Section title = {"Work Experience"} icon={SectionIcon(Suitcase)}>
+    <Section title = {"Work Experience"} id={'cv-work-experience'} icon={SectionIcon(Suitcase)}>
       <SectionItem
         date={"04/2021-now"}
+        city={"Copenhagen, Denmark"}
         header={"ChurchDesk"}
         subheader={"Software Developer, Backend"}
         details={[
-          "Super excited to be starting here in a few weeks!"
+          "Designing and implementing new features with Product Manager and other team members.",
+          "Refactoring really long methods from legacy code into something maintainable.",
+          "Upgrading dependencies.",
+          "Also ops stuff: e.g. I migrated the production db to new MariaDb cluster which I set up.",
         ]}
       />
       <SectionItem
-        date={"02/2021"}
+        date={"03/2021"}
+        city={"Copenhagen, Denmark"}
         header={"Uniqkey"}
         subheader={"Software Developer, QA"}
         details={[
@@ -50,6 +54,7 @@ export default function Home() {
       />
       <SectionItem
         date={"06/2019-12/2020"}
+        city={"Shanghai, China"}
         header={"Laboratory for Collaborative Intelligent Technologies"}
         subheader={"Software Developer"}
         details={[
@@ -61,6 +66,7 @@ export default function Home() {
 
       <SectionItem
         date={"04/2018-06/2018"}
+        city={"Shanghai, China"}
         header={"Ruijin Hospital"}
         subheader={"Software Developer"}
         details={[
@@ -69,6 +75,7 @@ export default function Home() {
       />
       <SectionItem
         date={"05/2015-12/2017"}
+        city={"Shanghai, China"}
         header={"KnowledgeLink Group Inc."}
         subheader={"Mathematics Teacher"}
         details={["Taught high-school Mathematics at the St. Mary's and Barstow campuses in Shanghai and Ningbo."
@@ -76,6 +83,7 @@ export default function Home() {
       />
       <SectionItem
         date={"04/2012-05/2015"}
+        city={"Madrid, Spain"}
         header={"Mango Producciones"}
         subheader={"Media Producer"}
         details={[ "Corporate video production for clients like Airbus, Iberia or Spanish Air Force."
@@ -90,6 +98,7 @@ export default function Home() {
 
     <SectionItem
       date={"09/2018-06/2021"}
+      city={"Shanghai, China"}
       header={"MSc. Computer Science"}
       subheader={"Shanghai Jiaotong University"}
       details={[
@@ -103,6 +112,7 @@ export default function Home() {
     />
       <SectionItem
         date={"12/2017-09/2018"}
+        city={"Shanghai, China"}
         header={"Self-study"}
         subheader={""}
         details={[
@@ -111,6 +121,7 @@ export default function Home() {
       />
       <SectionItem
         date={"09/2007-07/2010"}
+        city={"Aberystwyth, UK"}
         header={"BA Film and Television Studies"}
         subheader={"University of Wales, Aberystwyth"}
         details={[
@@ -141,9 +152,9 @@ export default function Home() {
         ]}
       />
       <SectionItem
-        date={"Cloud"}
+        date={"Ops"}
         header={""}
-        subheader={"Linux, AWS, Serverless, Docker, Kubernetes, CircleCI, Vagrant, Bash"}
+        subheader={"Linux, Ansible, MariaDb, AWS, Serverless, Docker, CircleCI, Vagrant, Bash..."}
         details={[
         ]}
       />
@@ -245,7 +256,7 @@ const PersonalInfoIcon = icon => styled(icon)`
 `
 const Section = (props) => {
   const Icon = props.icon
-  return <div style={{
+  return <div id={props.id} style={{
     margin: '2em 0',
     pageBreakBefore: props.pageBreak
   }}>
@@ -270,7 +281,10 @@ const SectionItem = props => {
     )
   }
   return <tr>
-    <td>{props.date}</td>
+    <td>
+      <div>{props.date}</div>
+      <div className='cv-city'>{props.city}</div>
+    </td>
     <td> <Header/>
       {props.subheader}
       <ul>
