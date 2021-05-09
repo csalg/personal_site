@@ -35,10 +35,10 @@ export default function Home() {
         header={"ChurchDesk"}
         subheader={"Software Developer, Backend"}
         details={[
-          "Designing and implementing new features with Product Manager and other team members.",
+          "Greenfield development with the rest of the team.",
           "Refactoring very long legacy code methods into something maintainable.",
-          "Bumping dependency versions.",
-          "Some ops stuff: e.g. I migrated the production db to new MariaDb cluster which I set up.",
+          "Bumping dependency versions with breaking changes.",
+          "Setting up and migrating new database infrastructure.",
         ]}
       />
       <SectionItem
