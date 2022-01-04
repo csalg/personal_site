@@ -35,21 +35,11 @@ export default function Home() {
         header={"ChurchDesk"}
         subheader={"Software Developer, Backend"}
         details={[
-          "Greenfield development with the rest of the team.",
-          "Refactoring very long legacy code methods into something maintainable.",
-          "Bumping dependency versions with breaking changes.",
-          "Setting up and migrating new database infrastructure.",
-        ]}
-      />
-      <SectionItem
-        date={"03/2021"}
-        city={"Copenhagen, Denmark"}
-        header={"Uniqkey"}
-        subheader={"Software Developer, QA"}
-        details={[
-          "Started service-level api testing, which now gets triggered as part of the CI/CD commit cycle.",
-          "Clarifying expected behaviour with PO, Support, QA and coming up with test cases.",
-          "Tech stack: Node, CircleCI, SQL, Pusher, mocha, chai, supertest.",
+          "Development of new messaging features which had a massive impact on sales in 2021Q4.",
+          "Integration with external API such as Unlayer, mjml, Google Geolocation and others.",
+          "Working with legacy code: refactoring, de-duplicating, extending test case coverage, etc.",
+          "Setting up and migrating new production MariaDb cluster to our own dedicated servers (using Ansible).",
+          "All sorts of infrastructure / sysadmin stuff: setting up encryption, backups, access management, etc.",
         ]}
       />
       <SectionItem
@@ -58,7 +48,7 @@ export default function Home() {
         header={"Laboratory for Collaborative Intelligent Technologies"}
         subheader={"Software Developer"}
         details={[
-          "Designed and implemented new publish-subscribe algorithms in C++.",
+          "Designed and implemented new publish-subscribe broker algorithms in C++.",
           "Full-stack work using Python for backends and predictive analytics and React for frontend work.",
           "Developed and published a predictive model for estimating vocabulary memory traces from user interaction data.",
         ]}
@@ -97,7 +87,7 @@ export default function Home() {
     >
 
     <SectionItem
-      date={"09/2018-06/2021"}
+      date={"09/2018-06/2022"}
       city={"Shanghai, China"}
       header={"MSc. Computer Science"}
       subheader={"Shanghai Jiaotong University"}
@@ -133,28 +123,28 @@ export default function Home() {
       <SectionItem
         date={"Design & architecture"}
         header={""}
-        subheader={"Event-stream architectures, domain-driven design, clean code, TDD/ATDD, UML"}
+        subheader={"Functional architectures, domain-driven design, clean code, TDD/ATDD, UML"}
         details={[
         ]}
       />
       <SectionItem
         date={"Backend languages"}
         header={""}
-        subheader={"Python (fastapi, async, flask, django, celery...), Node, Go, C++"}
+        subheader={"Typescript, Python, Go, C++"}
         details={[
         ]}
       />
       <SectionItem
         date={"Databases / Queues"}
         header={""}
-        subheader={"MongoDB, SQL, Kafka, DynamoDB"}
+        subheader={"MongoDB, MariaDb, Kafka, RabbitMQ, Elasticsearch, DynamoDB"}
         details={[
         ]}
       />
       <SectionItem
         date={"Ops"}
         header={""}
-        subheader={"Linux, Ansible, MariaDb, AWS, Serverless, Docker, CircleCI, Vagrant, Bash..."}
+        subheader={"Linux, Ansible, AWS, Serverless, Docker, CircleCI, Vagrant, Bash..."}
         details={[
         ]}
       />
@@ -177,7 +167,7 @@ export default function Home() {
       <SectionItem
         date={"Human languages"}
         header={""}
-        subheader={"Spanish (native), English (native), Chinese (advanced), German (intermediate)"}
+        subheader={"Spanish (native), English (native), Chinese (advanced), German (reading comprehension), Danish (reading comprehension)"}
         details={[
         ]}
       />
