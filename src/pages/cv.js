@@ -24,7 +24,7 @@ export default function Home() {
       <InfoItem name = 'Github' icon={PersonalInfoIcon(Github)} data={'github.com/csalg'} />
       <InfoItem name = 'LinkedIn' icon={PersonalInfoIcon(LinkedinSquare)} data={'linkedin.com/in/csalg'} />
       <InfoItem name = 'Phone' icon={PersonalInfoIcon(Phone)} data={'+45 5279 9658'} />
-      <InfoItem name = 'Address' icon={PersonalInfoIcon(LocationPin)} data={'Kagsåkollegiet 2, 2860 Søborg'} />
+      <InfoItem name = 'Address' icon={PersonalInfoIcon(LocationPin)} data={'2500 Valby, Denmark'} />
       <InfoItem name = 'Birthday' icon={PersonalInfoIcon(Cake2)} data={'01/07/1989, Madrid (Spain)'} />
     </PersonalInfo>
 
