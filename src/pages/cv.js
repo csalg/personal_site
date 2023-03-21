@@ -30,20 +30,19 @@ export default function Home() {
 
     <Section title={"Work Experience"} id={'cv-work-experience'} icon={SectionIcon(Suitcase)}>
       <SectionItem
-        date={"04/2021-Current"}
+        date={"03/2022-Current"}
         city={"Copenhagen, Denmark"}
         header={"raffle.ai"}
         subheader={"Software Developer, Backend"}
         details={[
-          "I spend a lot of time improving the scraper package, which supplies data to Raffle's data indexing solution from different types of sources",
-          "I also often analyze business processes and propose improvements; e.g. I was central in fixing a major bottleneck due to inefficiencies during onboarding.",
-          "I also work closely with support and write internal tooling that makes them more effective and improves their experience",
-          "Legacy code work: extend test coverage, improve modularity, merge coupled microservices, and generally try to improve code quality and developer experience.",
-          "Last but not least, I enjoy working with a great team of people who are super talented and professional."
+          "In general, my time in raffle has been marked by the fast expansion in data which we store and index. It has given me the opportunity to learn how to build distributed systems which are performant and highly available.",
+          "I was involved in scaling out our (formerly) single-node search crawler to a system using a manager node, worker nodes and an external queue.",
+          "I designed and implemented extensions to the web crawler package such as incremental scraping, deduplication and compatibility with Cloudflare-protected sites",
+          "I developed simple command line tools to improve the effectiveness of our support team (and I also kept the docs up to date and trained them). The business value was remarkable: e.g. onboarding time decreased from 10-15 days to 1-3 days after they started using these tools."
         ]}
       />
       <SectionItem
-        date={"04/2021-03/2022"}
+        date={"03/2021-02/2022"}
         city={"Copenhagen, Denmark"}
         header={"ChurchDesk"}
         subheader={"Software Developer, Backend"}
