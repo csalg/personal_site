@@ -19,7 +19,7 @@ export default function Home() {
   return <CV>
     <Header name={"Carlos Pérez-Guerra"} />
     <PersonalInfo>
-      <InfoItem name='Portfolio' icon={PersonalInfoIcon(World)} data={'www.csalgado.io'} />
+      <InfoItem name='Developer website' icon={PersonalInfoIcon(World)} data={'www.csalgado.io'} />
       <InfoItem name='E-Mail' icon={PersonalInfoIcon(Mail)} data={'charlie@csalgado.io'} />
       <InfoItem name='Github' icon={PersonalInfoIcon(Github)} data={'github.com/csalg'} />
       <InfoItem name='LinkedIn' icon={PersonalInfoIcon(LinkedinSquare)} data={'linkedin.com/in/csalg'} />
@@ -35,10 +35,10 @@ export default function Home() {
         header={"raffle.ai"}
         subheader={"Software Developer, Backend"}
         details={[
-          "In general, my time in raffle has been marked by the fast expansion in data which we store and index. It has given me the opportunity to learn how to build distributed systems which are performant and highly available.",
-          "I was involved in scaling out our (formerly) single-node search crawler to a system using a manager node, worker nodes and an external queue.",
-          "I designed and implemented extensions to the web crawler package such as incremental scraping, deduplication and compatibility with Cloudflare-protected sites",
-          "I developed simple command line tools to improve the effectiveness of our support team (and I also kept the docs up to date and trained them). The business value was remarkable: e.g. onboarding time decreased from 10-15 days to 1-3 days after they started using these tools."
+          "At a high level, did backend work for lots of features: page rank, differential scraping, content denoising, stealth mode (for scraping sites behind Cloudflare), autocomplete, constraint-based CSS blacklisting suggestions (cool backtracking implementation).",
+          "I was also responsible for horizontally scaling our data ingestion pipeline from a single node to a worker pool.",
+          "Another highlight: I came up with tooling to solve support issues very quickly, and trained support staff and student workers on their use. Due to this, the number of support issues we backenders had to work on dramatically decreased (maybe ~90%?, at one point the team was paralyzed solving rather trivial stuff).",
+          "I also did A LOT of reworking the codebase which had substantial impact on our velocity",
         ]}
       />
       <SectionItem
@@ -70,7 +70,7 @@ export default function Home() {
         date={"04/2018-06/2018"}
         city={"Shanghai, China"}
         header={"Ruijin Hospital"}
-        subheader={"Software Developer"}
+        subheader={"Student Software Developer"}
         details={[
           "Built CRUD app with a reactive frontend using Django and Elm.",
         ]}
@@ -109,7 +109,7 @@ export default function Home() {
             "Awarded CSC A scholarship for the duration of my studies.",
             `Key subjects: Algorithm Design and Analysis, Computer Networks, 
         Programming Languages, Machine Learning, Statistics, Bioinformatics`,
-            "(Remark: I decided NOT to graduate because apart from the classes, the program is2 additional years of being a postdoc essentially for free. However I completed all classes and even published a paper)"
+            "(Remark: I decided NOT to graduate because apart from the classes, the program requires two additional years of essentially being a postdoc for free. However I completed all classes with good grades and even published a paper)"
           ]}
         />
         <SectionItem
