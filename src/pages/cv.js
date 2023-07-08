@@ -179,7 +179,7 @@ export default function Home() {
         <SectionItem
           date={"Human languages"}
           header={""}
-          subheader={"Spanish (native), English (native), Chinese (advanced), German (reading comprehension), Danish (reading comprehension)"}
+          subheader={"Spanish (native), English (native)"}
           details={[
           ]}
         />
