@@ -37,7 +37,7 @@ export default function Home() {
         details={[
           "At a high level, did backend work for lots of features: page rank, differential scraping, content denoising, stealth mode (for scraping sites behind Cloudflare), autocomplete, constraint-based CSS blacklisting suggestions (cool backtracking implementation).",
           "I was also responsible for horizontally scaling our data ingestion pipeline from a single node to a worker pool.",
-          "Another highlight: I came up with tooling to solve support issues very quickly, and trained support staff and student workers on their use. Due to this, the number of support issues we backenders had to work on dramatically decreased (maybe ~90%?, at one point the team was paralyzed solving rather trivial stuff).",
+          "Another highlight: I came up with tooling to solve support issues very quickly, and trained support staff and student workers on their use. Due to this, the number of support issues we backenders had to work on plummeted (maybe ~90% reduction?, at one point the team was paralyzed solving rather trivial stuff).",
           "I also did A LOT of reworking the codebase which had substantial impact on our velocity",
         ]}
       />
@@ -99,13 +99,12 @@ export default function Home() {
       >
 
         <SectionItem
-          date={"09/2018-06/2022"}
+          date={"09/2018-03/2021"}
           city={"Shanghai, China"}
           header={"MSc. Computer Science"}
           subheader={"Shanghai Jiaotong University"}
           details={[
             "GPA: 3.8/4.0, top 5 percentile",
-            "Research direction: data-driven software development",
             "Awarded CSC A scholarship for the duration of my studies.",
             `Key subjects: Algorithm Design and Analysis, Computer Networks, 
         Programming Languages, Machine Learning, Statistics, Bioinformatics`,
@@ -149,7 +148,7 @@ export default function Home() {
         <SectionItem
           date={"Databases / Queues"}
           header={""}
-          subheader={"MongoDB, MariaDb, Kafka, RabbitMQ, Elasticsearch, DynamoDB"}
+          subheader={"PostgresDb, MariaDb, Redis, Nats, Kafka"}
           details={[
           ]}
         />
@@ -179,7 +178,7 @@ export default function Home() {
         <SectionItem
           date={"Human languages"}
           header={""}
-          subheader={"Spanish (native), English (native)"}
+          subheader={"Spanish (native), English (native), a little Danish"}
           details={[
           ]}
         />
