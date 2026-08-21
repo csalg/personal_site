@@ -23,42 +23,52 @@ export default function Home() {
       <InfoItem name='E-Mail' icon={PersonalInfoIcon(Mail)} data={'charlie@csalgado.io'} />
       <InfoItem name='Github' icon={PersonalInfoIcon(Github)} data={'github.com/csalg'} />
       <InfoItem name='LinkedIn' icon={PersonalInfoIcon(LinkedinSquare)} data={'linkedin.com/in/csalg'} />
-      <InfoItem name='Phone' icon={PersonalInfoIcon(Phone)} data={'+45 5279 9658'} />
-      <InfoItem name='Address' icon={PersonalInfoIcon(LocationPin)} data={'2500 Valby, Denmark'} />
+      <InfoItem name='Phone' icon={PersonalInfoIcon(Phone)} data={'+359 87 954 4808'} />
+      <InfoItem name='Home base' icon={PersonalInfoIcon(LocationPin)} data={'Sofia, Bulgaria'} />
       <InfoItem name='Birthday' icon={PersonalInfoIcon(Cake2)} data={'01/07/1989, Madrid (Spain)'} />
     </PersonalInfo>
 
     <Section title={"Work Experience"} id={'cv-work-experience'} icon={SectionIcon(Suitcase)}>
       <SectionItem
-        date={"03/2022-Current"}
+        date={"01/2025-Current"}
+        city={"Remote"}
+        header={"raffle.ai"}
+        subheader={"Senior Software Engineer"}
+        details={[
+          "Led the migration from a custom BERT fine-tuning pipeline to generic models, migrating core components to Go.",
+          "Moved vector search infrastructure from FAISS to Milvus, unlocking greater scalability, distributed reliability and maintainability.",
+        ]}
+      />
+      <SectionItem
+        date={"03/2022-01/2025"}
         city={"Copenhagen, Denmark"}
         header={"raffle.ai"}
-        subheader={"Software Developer, Backend"}
+        subheader={"Software Engineer (Backend)"}
         details={[
-          "At a high level, did backend work for lots of features: page rank, differential scraping, content denoising, stealth mode (for scraping sites behind Cloudflare), autocomplete, constraint-based CSS blacklisting suggestions (cool backtracking implementation).",
-          "I was also responsible for horizontally scaling our data ingestion pipeline from a single node to a worker pool.",
-          "Another highlight: I came up with tooling to solve support issues very quickly, and trained support staff and student workers on their use. Due to this, the number of support issues we backenders had to work on plummeted (maybe ~90% reduction?, at one point the team was paralyzed solving rather trivial stuff).",
-          "I also did A LOT of reworking the codebase which had substantial impact on our velocity",
+          "Scaled web scraper infrastructure from MVP to thousands of sandboxed, concurrent scrapes by overhauling the architecture and introducing queue-based async processing, dramatically improving reliability and system throughput.",
+          "Shipped many backend features: page rank, differential scraping, content denoising, stealth mode (for scraping sites behind Cloudflare), autocomplete, constraint-based CSS blacklisting suggestions.",
+          "Built CLI tools for self-serve pipeline troubleshooting by support teams, drastically reducing the support load on engineers.",
         ]}
       />
       <SectionItem
-        date={"03/2021-02/2022"}
+        date={"03/2021-03/2022"}
         city={"Copenhagen, Denmark"}
         header={"ChurchDesk"}
-        subheader={"Software Developer, Backend"}
+        subheader={"Software Engineer (Backend & Ops)"}
         details={[
-          "Development of newsletter and poster design features which had a massive impact on sales in 2021Q4.",
-          "Integration with external APIs like sendgrid, unlayer, mjml, Google Geolocation and others.",
+          "Development of new messaging features which had a massive impact on sales in 2021Q4.",
+          "Integration with external APIs like Sendgrid, Unlayer, mjml, Google Geolocation and others.",
           "Working with legacy code: refactoring, de-duplicating, extending test case coverage, etc.",
           "Setting up and migrating new production MariaDb cluster to our own dedicated servers (using Ansible).",
-          "All sorts of infrastructure / sysadmin stuff: setting up encryption, backups, access management, etc.",
+          "All sorts of infrastructure / sysadmin work: setting up encryption, backups, access management, etc.",
+          "Performance optimization using metrics from Elastic, splitting off slow endpoints and profiling tools to find procedures blocking the main thread.",
         ]}
       />
       <SectionItem
-        date={"06/2019-12/2020"}
+        date={"06/2019-02/2021"}
         city={"Shanghai, China"}
         header={"Laboratory for Collaborative Intelligent Technologies"}
-        subheader={"Software Developer"}
+        subheader={"Software Engineer (Apprenticeship)"}
         details={[
           "Designed and implemented new publish-subscribe broker algorithms in C++.",
           "Full-stack work using Python for backends and predictive analytics and React for frontend work.",
@@ -67,12 +77,13 @@ export default function Home() {
       />
 
       <SectionItem
-        date={"04/2018-06/2018"}
+        date={"04/2018-08/2018"}
         city={"Shanghai, China"}
         header={"Ruijin Hospital"}
         subheader={"Student Software Developer"}
         details={[
-          "Built CRUD app with a reactive frontend using Django and Elm.",
+          "Developed a chemotherapy tracking solution helping nurses set and track doses, manage drug inventory & expiry dates, print labels and store heart report results.",
+          "Built with Django and Elm, with a reactive frontend designed to prevent human error.",
         ]}
       />
       <SectionItem
@@ -80,7 +91,9 @@ export default function Home() {
         city={"Shanghai, China"}
         header={"KnowledgeLink Group Inc."}
         subheader={"Mathematics Teacher"}
-        details={["Taught high-school Mathematics at the St. Mary's and Barstow campuses in Shanghai and Ningbo."
+        details={[
+          "Taught high-school Mathematics at the St. Mary's and Barstow campuses in Shanghai and Ningbo.",
+          "Created lessons within a blended learning environment and assisted the school in the use of technology and media in the classroom.",
         ]}
       />
       <SectionItem
@@ -106,8 +119,8 @@ export default function Home() {
           details={[
             "GPA: 3.8/4.0, top 5 percentile",
             "Awarded CSC A scholarship for the duration of my studies.",
-            `Key subjects: Algorithm Design and Analysis, Computer Networks, 
-        Programming Languages, Machine Learning, Statistics, Bioinformatics`,
+            `Key subjects: Algorithm Design and Analysis, Computer Networks,
+        Programming Languages, Machine Learning, Statistical Learning, Linear System Theory, Game Theory, Optimization, Real Analysis, Statistics, Bioinformatics`,
             "(Remark: I decided NOT to graduate because apart from the classes, the program requires two additional years of essentially being a postdoc for free. However I completed all classes with good grades and even published a paper)"
           ]}
         />
@@ -118,6 +131,7 @@ export default function Home() {
           subheader={""}
           details={[
             "Studied Math and CS topics by myself full-time.",
+            "Areas of study: Programming (SICP), Algorithms, Linear Algebra, Multivariable Calculus, Probability, Statistics, Statistical Inference, Machine Learning.",
           ]}
         />
         <SectionItem
@@ -148,7 +162,7 @@ export default function Home() {
         <SectionItem
           date={"Databases / Queues"}
           header={""}
-          subheader={"PostgresDb, MariaDb, Redis, Nats, Kafka"}
+          subheader={"PostgresDb, MariaDb, Redis, Nats, Kafka, Milvus"}
           details={[
           ]}
         />
