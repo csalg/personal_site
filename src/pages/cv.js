@@ -223,12 +223,8 @@ export default function Home() {
 }
 
 const CV = props => (
-  <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-    <div style={{
-      width: '210mm',
-      background: 'white',
-      padding: '4em'
-    }}>
+  <div className={'cv-root'}>
+    <div className={'cv-sheet'}>
       {props.children}
 
     </div>

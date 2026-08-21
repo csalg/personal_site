@@ -19,20 +19,6 @@ body {
     font-family: Open Sans, arial, sans-serif;
     margin: 0;
 }
-@media print {
-    body>div {
-        background-color: white;
-    }
-
-    .personal-info {
-       margin-top: -11em;
-    }
-
-    #cv-work-experience {
-        font-size: 90%;
-    }
-
-    }
 
 table.sectionTable {
     border-collapse: collapse;
@@ -142,4 +128,71 @@ li {
     font-size: 80%;
     font-style: italic;
     opacity: 80%;
+}
+
+.cv-root {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cv-sheet {
+    width: 210mm;
+    background: white;
+    padding: 4em;
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 11mm;
+    }
+
+    html,
+    body {
+        background: white !important;
+        width: auto;
+    }
+
+    .cv-root {
+        display: block;
+    }
+
+    .cv-sheet {
+        width: auto;
+        padding: 0;
+        background: white;
+    }
+
+    .personal-info {
+        margin: 1.5em 0 2em 0;
+    }
+
+    #cv-work-experience {
+        font-size: 90%;
+    }
+
+    tr,
+    li {
+        break-inside: avoid;
+    }
+
+    h3 {
+        break-after: avoid;
+    }
+
+    .page {
+        page-break-before: auto;
+        margin-top: 2.5em;
+    }
+
+    .header img {
+        width: 22%;
+    }
+
+    .circle-icon,
+    tr>td:first-child {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
 }
