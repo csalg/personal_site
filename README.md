@@ -1,5 +1,10 @@
 ### Development notes
 
-* This version of `gatsby` doesn't seem to like the newer versions of `node`; apparently it's some issue to do with the webpack version. So `nvm use 14`.
-* To install `npm install`. If there are some errors then `rm -rf node_modules package-lock.json` and try again.
-* Then to develop `gatsby develop`.
+* Requires Node >= 18 (Gatsby 5). Any recent LTS works; CI builds on Node 20.
+* To install `npm install`.
+* Then to develop `npm start`. To build for production `npm run build`.
+
+### Deployment
+
+* Pushes to `master` build and deploy to GitHub Pages via `.github/workflows/deploy.yml`.
+* The custom domain is pinned by `static/CNAME` (`www.csalgado.io`); DNS must point at the GitHub Pages host.

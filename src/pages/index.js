@@ -6,7 +6,7 @@ import { LogoReact } from "@styled-icons/ionicons-solid/LogoReact"
 import { Mongodb } from "@styled-icons/simple-icons/Mongodb"
 import { Flask } from "@styled-icons/simple-icons/Flask"
 import { Antdesign } from "@styled-icons/simple-icons/Antdesign"
-import { ScikitLearn } from "@styled-icons/simple-icons/ScikitLearn"
+import { Scikitlearn } from "@styled-icons/simple-icons/Scikitlearn"
 import { Pandas } from "@styled-icons/simple-icons/Pandas"
 import { Numpy } from "@styled-icons/simple-icons/Numpy"
 import { Elm } from "@styled-icons/simple-icons/Elm"
@@ -53,7 +53,7 @@ export default () => (
         "The paper which introduces my approach was recently accepted to the CSCW 2021 conference."]}
       stack={[
         <StackItem Icon={LogoPython} name='Python' />,
-        <StackItem Icon={ScikitLearn} name='sklearn' />,
+        <StackItem Icon={Scikitlearn} name='sklearn' />,
         <StackItem Icon={Pandas} name='Pandas' />,
         <StackItem Icon={Numpy} name='Numpy' />,
         <StackItem Icon={Latex} name='Latex' />
