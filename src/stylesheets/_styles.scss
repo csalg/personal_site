@@ -11,9 +11,10 @@ $GREY7: #444;
 $GREY8: #1A1E23;
 $BREAKPOINT: 1000px;
 $MOBILE_BREAKPOINT: 500px;
+$accent: #1f4e79;
 
 a {
-  color: coral;
+  color: $accent;
 }
 
 @font-face {

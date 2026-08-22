@@ -1,198 +1,344 @@
 @import "_styles";
 
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+$cv-accent: $accent;
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
 
 @font-face {
-    font-family: 'Palatino Linotype';
-    src: url('../fonts/Palatino Linotype.ttf') /* Safari, Android, iOS */
+  font-family: "Palatino Linotype";
+  src: url("../fonts/Palatino Linotype.ttf"); /* Safari, Android, iOS */
 }
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: hsla(0,0%,0%,0.2);
-    font-family: Open Sans, arial, sans-serif;
-    margin: 0;
+  background-color: hsla(0, 0%, 0%, 0.2);
+  font-family: Open Sans, arial, sans-serif;
+  margin: 0;
 }
 
-table.sectionTable {
-    border-collapse: collapse;
-    width: 100%;
-    table-layout: fixed;
-}
-
-table.personalInfoTable {
-    border-collapse: collapse;
-    width: 67%;
-}
-
-tr {
-    border-bottom: 2px solid hsla(0,1%,0%,0.1);
-}
-
-tr>td:first-child {
-    /*background-color: aqua;*/
-    width: 200px;
-    color: hsla(0,0%, 0%, 0.7);
-}
-tr>td:last-child {
-    /*background-color: aqua;*/
-    max-width: 450px;
-}
-
-h3 {
-    font-weight: 500;
-}
-
-td {
-    vertical-align: top;
-    padding: 0.5em 0;
-    word-wrap:break-word;
-    white-space: normal
-}
-
-ul {
-    word-wrap:break-word;
-    white-space: normal;
-    margin: 0;
-    padding-left: 1em;
-}
-
-li {
-    font-size: 0.9em;
-    color: hsla(0,0%,0%,0.8);
-    line-height: 1.3;
-    word-wrap:break-word;
-}
-.circle-icon {
-    background: hsla(0,0%,0%,0.6) !important;
-    color: white;
-    border-radius: 50%;
-    text-align: center;
-    vertical-align: middle;
-    padding: 5px 8px;
-    margin-top: -0.3em;
-}
-
-.name {
-    font-family: Palatino Linotype, arial, sans-serif;
-}
-
-.page {
-    page-break-before: always;
-    margin-top: 4em;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    margin: 1em 0 0.5em 0;
-
-    img {
-        width: 25%;
-        border-radius: 50%;
-    }
-}
-
-
-.personal-info {
-    margin: -9.5em 0 2em 0;
-}
-@media only screen and (max-width: 210mm) {
-    table.sectionTable {
-        width: auto;
-    }
-    tr td {
-        display: block;
-        width: auto;
-    }
-    .header {
-        flex-direction: column;
-        align-items: center;
-
-        img {
-            width: 180px;
-        }
-    }
-    .personal-info {
-        margin: 0;
-    }
-}
-
-.cv-city {
-    font-size: 80%;
-    font-style: italic;
-    opacity: 80%;
-}
+/* ---------- sheet ---------- */
 
 .cv-root {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .cv-sheet {
-    width: 210mm;
-    background: white;
-    padding: 4em;
+  width: 210mm;
+  background: white;
+  padding: 4em;
+
+  a {
+    color: $cv-accent;
+    text-decoration: none;
+  }
 }
 
+/* ---------- header ---------- */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2em;
+  margin: 1em 0 1.75em 0;
+
+  img {
+    width: 25%;
+    flex-shrink: 0;
+    border-radius: 50%;
+  }
+}
+
+.header-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.name {
+  font-family: Palatino Linotype, arial, sans-serif;
+  margin: 0 0 -0.2em 0;
+}
+
+.header-subtitle {
+  color: hsla(0, 0%, 0%, 0.6);
+}
+
+.cv-summary {
+  margin: 1.25em 0 0 0;
+  color: hsla(0, 0%, 0%, 0.75);
+  line-height: 1.45;
+}
+
+/* ---------- personal info ---------- */
+
+.personal-info {
+  margin: 0 0 1em 0;
+}
+
+.personal-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2.5em;
+}
+
+.info-item {
+  display: flex;
+  align-items: baseline;
+  padding: 0.45em 0;
+  border-bottom: 1px solid hsla(0, 1%, 0%, 0.08);
+}
+
+.info-icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.info-label {
+  padding-left: 10px;
+  color: hsla(0, 0%, 0%, 0.7);
+}
+
+.info-value {
+  margin-left: auto;
+  padding-left: 0.75em;
+  text-align: right;
+}
+
+/* ---------- sections ---------- */
+
+.section {
+  margin: 2em 0;
+}
+
+.section-title {
+  font-weight: 500;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.2em;
+  border-bottom: 2px solid $cv-accent;
+}
+
+.section-heading-text {
+  padding-left: 0.25em;
+}
+
+.item-header {
+  font-weight: bold;
+  color: hsla(0, 0%, 0%, 0.8);
+}
+
+.circle-icon {
+  background: $cv-accent !important;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px 8px;
+  margin-top: -0.3em;
+
+  svg {
+    width: 0.9em;
+    height: 0.9em;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+table.sectionTable {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+tr {
+  border-bottom: 2px solid hsla(0, 1%, 0%, 0.1);
+}
+
+tr > td:first-child {
+  /*background-color: aqua;*/
+  width: 200px;
+  color: hsla(0, 0%, 0%, 0.7);
+}
+
+tr > td:last-child {
+  /*background-color: aqua;*/
+  max-width: 450px;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+td {
+  vertical-align: top;
+  padding: 0.5em 0;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+ul {
+  word-wrap: break-word;
+  white-space: normal;
+  margin: 0;
+  padding-left: 1em;
+}
+
+li {
+  font-size: 0.9em;
+  color: hsla(0, 0%, 0%, 0.8);
+  line-height: 1.3;
+  word-wrap: break-word;
+}
+
+.cv-city {
+  font-size: 80%;
+  font-style: italic;
+  opacity: 80%;
+}
+
+.page {
+  page-break-before: always;
+  margin-top: 4em;
+}
+
+/* ---------- skills ---------- */
+
+.skill-row {
+  display: flex;
+  padding: 0.45em 0;
+  border-bottom: 1px solid hsla(0, 1%, 0%, 0.08);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.skill-category {
+  width: 32%;
+  flex-shrink: 0;
+  padding-right: 1em;
+  color: hsla(0, 0%, 0%, 0.7);
+}
+
+.skill-items {
+  flex: 1;
+}
+
+/* ---------- publications ---------- */
+
+.publication {
+  display: flex;
+  padding: 0.25em 0;
+
+  .publication-icon {
+    width: 4.4em;
+    flex-shrink: 0;
+
+    svg {
+      width: 0.85em;
+      margin: 0.15em 0.5em 0.25em 2.5em;
+      color: hsla(0, 0%, 0%, 0.4);
+    }
+  }
+
+  > div {
+    max-width: 70ch;
+  }
+}
+
+/* ---------- narrow screens ---------- */
+
+@media only screen and (max-width: 210mm) {
+  .cv-sheet {
+    width: 100%;
+    padding: 2em 1.25em;
+  }
+  table.sectionTable {
+    width: auto;
+  }
+  tr td {
+    display: block;
+    width: auto;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 180px;
+    }
+  }
+  .personal-info {
+    margin: 0;
+  }
+  .personal-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- print (keep last!) ---------- */
+
 @media print {
-    @page {
-        size: A4;
-        margin: 11mm;
-    }
+  @page {
+    size: A4;
+    margin: 11mm;
+  }
 
-    html,
-    body {
-        background: white !important;
-        width: auto;
-    }
+  html,
+  body {
+    background: white !important;
+    width: auto;
+  }
 
-    .cv-root {
-        display: block;
-    }
+  .cv-root {
+    display: block;
+  }
 
-    .cv-sheet {
-        width: auto;
-        padding: 0;
-        background: white;
-    }
+  .cv-sheet {
+    width: auto;
+    padding: 0;
+    background: white;
 
-    .personal-info {
-        margin: 1.5em 0 2em 0;
+    a {
+      color: $cv-accent;
     }
+  }
 
-    #cv-work-experience {
-        font-size: 90%;
-    }
+  #cv-work-experience {
+    font-size: 90%;
+  }
 
-    tr,
-    li {
-        break-inside: avoid;
-    }
+  tr,
+  li,
+  .info-item,
+  .skill-row,
+  .cv-summary,
+  .publication {
+    break-inside: avoid;
+  }
 
-    h3 {
-        break-after: avoid;
-    }
+  h3 {
+    break-after: avoid;
+  }
 
-    .page {
-        page-break-before: auto;
-        margin-top: 2.5em;
-    }
+  .page {
+    page-break-before: auto;
+    margin-top: 2.5em;
+  }
 
-    .header img {
-        width: 22%;
-    }
+  .header img {
+    width: 20%;
+  }
 
-    .circle-icon,
-    tr>td:first-child {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
+  .circle-icon,
+  h3,
+  .cv-sheet a {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
 }
