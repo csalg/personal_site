@@ -7,8 +7,15 @@ make `csalg.com` the canonical domain and deprecate `csalgado.io`.**
 
 | Domain        | Registrar            | DNS hosted at | Role                                              |
 | ------------- | -------------------- | ------------- | ------------------------------------------------- |
-| `csalgado.io` | NameSilo             | Cloudflare    | **current canonical** (serving the site)          |
-| `csalg.com`   | Cloudflare Registrar | Cloudflare    | future canonical; currently **301 → csalgado.io** |
+| `csalg.com`   | Cloudflare Registrar | Cloudflare    | **current canonical** (serving the site over HTTPS) |
+| `csalgado.io` | NameSilo             | Cloudflare    | **301 → csalg.com** redirect; still carries mailbox.org email |
+
+> **Status (2026-09-11):** the canonical cutover's GitHub Pages step is live. GitHub Pages is
+> bound to `csalg.com`; `csalg.com` web DNS is DNS-only GitHub Pages records;
+> the old `csalg.com` → `csalgado.io` redirect was removed; the Let's Encrypt
+> certificate is issued and Enforce HTTPS is enabled. `csalgado.io` now redirects
+> to `csalg.com` through Cloudflare while retaining mailbox.org email records. See
+> `logbook/260822-csalgcom-canonical-cutover.md`.
 
 Both zones live in the same Cloudflare account. The site itself is a Gatsby 5
 site in `csalg/personal_site`, deployed to **GitHub Pages** via
@@ -19,23 +26,22 @@ site in `csalg/personal_site`, deployed to **GitHub Pages** via
 ### GitHub Pages
 
 - `csalg/personal_site` → Pages enabled (GitHub Actions source).
-- Custom domain bound: `csalgado.io` (GitHub serves both apex and `www` for a
-  bound domain; `https://csalgado.io/`).
+- Custom domain bound: `csalg.com` (GitHub serves both apex and `www` for a
+  bound domain; `https://csalg.com/`, with Enforce HTTPS enabled).
 - The workflow builds `public/` and deploys it; `static/CNAME` is **not** used
   by workflow deploys (the domain is set in the Pages settings/API).
 
 ### DNS — csalgado.io (Cloudflare zone)
 
-Web (GitHub Pages, **DNS only / grey cloud** — GitHub must see the records to
-issue its cert):
+Web redirect (Cloudflare proxy, **proxied / orange cloud**):
 
 ```
-A      @             → 185.199.108.153
-A      @             → 185.199.109.153
-A      @             → 185.199.110.153
-A      @             → 185.199.111.153
-CNAME  www           → csalg.github.io
+A      @             → 192.0.2.1       (proxied)
+CNAME  www           → csalg.github.io  (proxied)
 ```
+
+Cloudflare Page Rule: `*csalgado.io/*` → **301** `https://csalg.com/$2`
+(path and query preserved).
 
 Email (mailbox.org — do not touch):
 
@@ -61,16 +67,19 @@ Notes:
 
 ### DNS — csalg.com (Cloudflare zone)
 
-Redirect-only. Backed by proxied placeholder records so Cloudflare's edge can
-answer and fire the redirect:
+Canonical, pointing at GitHub Pages (**DNS only / grey cloud** — GitHub must see
+the records to serve its certificate):
 
 ```
-A      @   → 192.0.2.1   (proxied)
-A      www → 192.0.2.1   (proxied)
+A      @             → 185.199.108.153
+A      @             → 185.199.109.153
+A      @             → 185.199.110.153
+A      @             → 185.199.111.153
+CNAME  www           → csalg.github.io
 ```
 
-Redirect rule (Page Rule): `*csalg.com/*` → **301** `https://csalgado.io/$2`
-(path preserved).
+(The former proxied placeholder `A` records and the `*csalg.com/*` → 301
+`csalgado.io` Page Rule were removed on 2026-08-22.)
 
 ## Why the plan is to switch canonical to csalg.com
 
@@ -81,28 +90,24 @@ Redirect rule (Page Rule): `*csalg.com/*` → **301** `https://csalgado.io/$2`
 
 ## Roadmap: make csalg.com canonical
 
-1. Wait for `csalgado.io` cutover to settle (see logbook `260822-...`), verify
-   HTTPS + Enforce HTTPS on the Pages site.
-2. Change the GitHub Pages custom domain from `csalgado.io` to `csalg.com`
-   (one API call: `PUT /repos/csalg/personal_site/pages` with `cname: "csalg.com"`).
-3. In Cloudflare, re-point `csalg.com` `A`/`www` records at GitHub Pages:
-   `A @` → `185.199.108.153`/`.109`/`.110`/`.111` (DNS only), `CNAME www` →
-   `csalg.github.io`.
-4. Flip the `csalgado.io` zone to redirect: change its records to the redirect
-   setup (proxied placeholder `A` records + a redirect rule → `https://csalg.com`).
+1. ~~Wait for the `csalgado.io` cutover and provision the `csalg.com` certificate.~~
+   Completed 2026-09-11: GitHub Pages serves a Let's Encrypt certificate for
+   `csalg.com` and `www.csalg.com`, with Enforce HTTPS enabled.
+2. ~~Bind GitHub Pages to `csalg.com` and point its DNS at GitHub Pages.~~
+   Completed 2026-09-11; DNS remains DNS-only as required by GitHub Pages.
+3. ~~Flip the `csalgado.io` zone to redirect.~~ Completed 2026-09-11 with
+   proxied web records and a path-preserving Cloudflare 301 to `https://csalg.com`.
    **Keep the mailbox.org MX/SPF/DKIM records on csalgado.io** (email
    `charlie@csalgado.io` stays), and make `csalg.com` the new MX/SPF/DKIM holder
    if email moves there later.
-5. Update the site's visible links (CV website field `www.csalgado.io`, README)
+4. Update the site's visible links (CV website field `www.csalgado.io`, README)
    and any references in the repo.
 
 ## Operational notes
 
-- **Cloudflare tokens:** creating zones needs the account-level `zone.create`
-  permission; writing zone DNS needs zone-level `DNS: Edit`. A user API token
-  with `Zone:Read` + `DNS:Edit` on "All zones" is the reliable combination for
-  this kind of work. The account token on this machine currently cannot do DNS
-  writes or activation checks.
+- **Cloudflare tokens:** the current token can write DNS and Page Rules for the
+  active zones; Zone Rulesets and some zone settings endpoints are not available
+  to it.
 - **Email is the sensitive part.** Any DNS migration must carry over
   MX/SPF/SRV/DKIM. Verify with `dig`/public-DNS lookups before switching
   nameservers.

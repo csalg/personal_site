@@ -37,8 +37,8 @@ export default function Home() {
           <InfoItem
             name="Website"
             icon={World}
-            data={"www.csalgado.io"}
-            href={"https://www.csalgado.io"}
+            data={"csalg.com"}
+            href={"https://csalg.com"}
           />
           <InfoItem
             name="E-Mail"
@@ -82,20 +82,21 @@ export default function Home() {
           icon={Suitcase}
         >
           <SectionItem
-            date={"01/2025 – Current"}
+            date={"12/2023 – Current"}
             city={"Remote"}
             header={"raffle.ai"}
-            subheader={"Senior Software Engineer"}
+            subheader={"Senior Software Engineer (Contractor)"}
             details={[
+              "Promoted to Senior Software Engineer in 01/2025.",
               "Led the migration from a custom BERT fine-tuning pipeline to generic models, migrating core components to Go.",
               "Moved vector search infrastructure from FAISS to Milvus, unlocking greater scalability, distributed reliability and maintainability.",
             ]}
           />
           <SectionItem
-            date={"03/2022 – 01/2025"}
+            date={"03/2022 – 12/2023"}
             city={"Copenhagen, Denmark"}
             header={"raffle.ai"}
-            subheader={"Software Engineer (Backend)"}
+            subheader={"Software Engineer (Backend, Employee)"}
             details={[
               "Scaled web scraper infrastructure from MVP to thousands of sandboxed, concurrent scrapes by overhauling the architecture and introducing queue-based async processing, dramatically improving reliability and system throughput.",
               "Shipped many backend features: page rank, differential scraping, content denoising, stealth mode (for scraping sites behind Cloudflare), autocomplete, constraint-based CSS blacklisting suggestions.",

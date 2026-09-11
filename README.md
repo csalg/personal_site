@@ -7,4 +7,4 @@
 ### Deployment
 
 * Pushes to `master` build and deploy to GitHub Pages via `.github/workflows/deploy.yml`.
-* The custom domain is pinned by `static/CNAME` (`www.csalgado.io`); DNS must point at the GitHub Pages host.
+* The custom domain is configured in GitHub Pages settings/API; `static/CNAME` mirrors `csalg.com` for the generated site. DNS must point at the GitHub Pages host.
